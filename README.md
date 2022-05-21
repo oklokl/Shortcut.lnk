@@ -26,7 +26,11 @@ temp 폴더를 비우거나 다운로드 폴더를 비우는 단순한 작업을
 
 기타 바로가기로
 
-Shortcut cmd (Shutting down the Window)
+.
+
+.
+
+Shortcut cmd (Shutting down the Window) https://youtube.com/shorts/fbJGm-Nh4fU 등록 방법 허접 하지만 올려 보아요 컴맹 분들을 위해 ㅎ
 ```
 shutdown /s /t 7
 ```
