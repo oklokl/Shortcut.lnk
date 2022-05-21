@@ -1,0 +1,54 @@
+https://youtu.be/LpBoQepC08U
+영상 설명
+
+cmd.exe /c DEL /s /f /q "%USERPROFILE%\Downloads\*.*"
+다운로드 폴더 모두 비우기
+
+cmd.exe /c DEL /s /f /q "%USERPROFILE%\Downloads\*.gif"
+다운로드 폴더 gif 파일 모두 지우기
+
+cmd.exe /c DEL /s /f /q "%USERPROFILE%\Downloads\*.torrent"
+다운로드 폴더 토렌 파일 지우기 
+
+cmd.exe /c DEL /s /f /q "%USERPROFILE%\Downloads\*.torrent" "%USERPROFILE%\Downloads\*.gif" "%USERPROFILE%\Downloads\*.jpg"
+동시에 여러 곳의 확장자 지우기 토렌 사진
+
+
+cmd.exe /c pushd "%USERPROFILE%\Downloads" && del /s/f/q *.gif;*.jpg;*.torrent;*.png & popd
+한번에 여러개 확장자 지우기 명령어 심플 하게
+
+powershell.exe -Command "& {Get-ChildItem $env:USERPROFILE\downloads | Remove-Item -recurse}"
+다운로드 폴더 비우기 파워쉘 버전 단점은 검은 화면이 나옵니다.
+
+
+powershell.exe -Command "& {Get-ChildItem $env:USERPROFILE\Pictures | Remove-Item -recurse}"
+사진 폴더의 경우.
+
+powershell.exe -Command "& {Get-ChildItem $env:temp | Remove-Item -recurse}"
+temp 임시 파일 폴더임
+
+powershell.exe -Command "& {Get-ChildItem $env:USERPROFILE\downloads,$env:USERPROFILE\Pictures| Remove-Item -recurse}"
+두개의 폴더 비우기
+
+cmd /c start /min "" cmd /k powershell -windowstyle hidden -Command "& {Get-ChildItem """$env:USERPROFILE\downloads""" | Remove-Item -recurse; Stop-Process -name CMD}"
+파워쉘 창 숨기기 다운로드 폴더 비우기
+
+cmd /c start /min "" cmd /k powershell -windowstyle hidden -Command "& {Get-ChildItem """$env:temp""" | Remove-Item -recurse; Stop-Process -name CMD}"
+파워쉘 창 숨기기 다운로드 temp 폴더 비우기
+
+cmd /c start /min "" PowerShell -WindowStyle Hidden -executionpolicy bypass -noninteractive Clear-RecycleBin -force -ErrorAction:Ignore
+휴지통 비우기
+
+cmd /c start /min "" PowerShell -WindowStyle Hidden -executionpolicy bypass -noninteractive Clear-RecycleBin -force -ErrorAction:Ignore; Stop-Process -name CMD
+휴지통 비우기 더 고급 버전
+
+
+
+기타 방어벽 로그 바로 가기
+Powershell -Command "& {Start-Process -FilePath """cmd""" -ArgumentList """/c""","""start""","""notepad""",""""%systemroot%\system32\LogFiles\Firewall\pfirewall.log""""-Verb RunAs}"
+
+
+
+
+
+
