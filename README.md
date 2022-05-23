@@ -55,3 +55,13 @@ shutdown /s /t 0
 대기 절전모드
 
 https://youtu.be/qW_qLVU4tPQ 바로가기 만드는 방법
+
+```
+cmd.exe /c powershell (Add-Type '[DllImport(\"user32.dll\")]^public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::SendMessage(-1,0x0112,0xF170,2)
+```
+https://ngo.migrantok.org/bbs/board.php?bo_table=computer&wr_id=280 퍼왔음 ㅎ 모니터 끄기 
+
+```
+%windir%\System32\scrnsave.scr /s
+```
+검은 화면만 나오게 하는 끄기 
