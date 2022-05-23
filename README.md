@@ -32,15 +32,26 @@ temp 폴더를 비우거나 다운로드 폴더를 비우는 단순한 작업을
 
 Shortcut cmd (Shutting down the Window) https://youtube.com/shorts/fbJGm-Nh4fU 등록 방법 허접 하지만 올려 보아요 컴맹 분들을 위해 ㅎ
 ```
-shutdown /s /t 7
+shutdown /s /t 0
 ```
 바로 가기 만드시면 컴퓨터를 바로 끌수 있다고 하네요. 뒤에 시간은 60초는 1분 입니다. 2분은 120초죠.
 3분은?.. 60x3 입니다. 180이 되네요.
 
-해보니 60초는 너무 길고. 7초가 적당 하네요 
+해보니 60초는 너무 길고. 0초가 적당 하네요 
 
 ![2](https://user-images.githubusercontent.com/1571600/169669385-ec378ac2-0d28-491a-9317-bff51420006e.png)
 
 작업 표시줄에는 잘 안쓰는 곳에 넣으면 될듯 해요 전 저 공간이 잘 안쓰는 공간이에요 싸이드는 많이 쓰고요 ㅎㅎ 양쪽 
 
 작업 표시줄에 옴겼다면 바탕 화면에 있는 것은 삭제 하셔도 상관 없어요.
+
+```
+%windir%\System32\rundll32.exe powrprof.dll SetSuspendState Hibernate
+```
+최대 절전모드
+```
+%windir%\System32\rundll32.exe powrprof.dll SetSuspendState
+```
+대기 절전모드
+
+https://youtu.be/qW_qLVU4tPQ 바로가기 만드는 방법
