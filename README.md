@@ -34,6 +34,11 @@ Shortcut cmd (Shutting down the Window) https://youtube.com/shorts/fbJGm-Nh4fU �
 ```
 shutdown /s /t 0
 ```
+```
+shutdown /p /f
+```
+/p /f 프로세스가 중지 안되어도 무시 하고 종료
+
 바로 가기 만드시면 컴퓨터를 바로 끌수 있다고 하네요. 뒤에 시간은 60초는 1분 입니다. 2분은 120초죠.
 3분은?.. 60x3 입니다. 180이 되네요.
 
